@@ -1,814 +1,729 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>K's Office | 職人・一人親方のWeb名刺LP制作</title>
-<meta name="description" content="福岡の職人・一人親方向け。写真と情報を送るだけで、名刺に付けられる仕事紹介ページを作ります。先着価格35,000円（税込）。">
-<meta name="google-site-verification" content="Fpj9J9oymmJln3r">
-<link rel="canonical" href="https://ks-office-web.github.io/ks-office-sales-lp-v2/">
-<meta property="og:title" content="K's Office | 職人・一人親方のWeb名刺LP制作">
-<meta property="og:description" content="名刺を渡すだけで、仕事の中身まで見てもらえる。先着価格35,000円。">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://ks-office-web.github.io/ks-office-sales-lp-v2/">
-<meta property="og:locale" content="ja_JP">
-<!-- <meta property="og:image" content="https://ks-office-web.github.io/ks-office-sales-lp-v2/assets/img/ogp.jpg"> -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="K's Office | 職人・一人親方のWeb名刺LP制作">
-<meta name="twitter:description" content="名刺を渡すだけで、仕事の中身まで見てもらえる。先着価格35,000円。">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "K's Office",
-  "description": "福岡の職人・一人親方向けWeb名刺LP制作サービス",
-  "url": "https://ks-office-web.github.io/ks-office-sales-lp-v2/",
-  "areaServed": {"@type": "Place", "name": "福岡"},
-  "priceRange": "¥35,000〜¥58,000",
-  "serviceType": "Web名刺LP制作",
-  "makesOffer": [
-    {
-      "@type": "Offer",
-      "name": "仕事紹介ページ制作（キャンペーン価格）",
-      "price": "35000",
-      "priceCurrency": "JPY",
-      "description": "職人・一人親方向け1ページ制作。先着15名キャンペーン価格。",
-      "eligibleRegion": {"@type": "Place", "name": "福岡"}
-    },
-    {
-      "@type": "Offer",
-      "name": "仕事紹介ページ制作（通常価格）",
-      "price": "58000",
-      "priceCurrency": "JPY",
-      "description": "職人・一人親方向け1ページ制作。通常価格。"
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K's Office | 職人・一人親方の自己紹介ページ制作</title>
+  <meta name="description" content="名刺にQRを付けて、仕事の中身まで伝える。福岡エリアの職人・一人親方向け自己紹介ページ制作サービス。先着15名限定35,000円（税込）。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #0d0d0d;
+      --dark: #1a1a1a;
+      --gold: #c9a84c;
+      --gold-light: #e8c97a;
+      --white: #ffffff;
+      --offwhite: #f4f1ea;
+      --line-green: #06C755;
+      --gray: #888;
     }
-  ],
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "contactType": "customer service",
-    "url": "https://lin.ee/S0ZnWK0"
-  }
-}
-</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet">
-<style>
-/* ========================
-   RESET & ROOT
-======================== */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: 'Noto Sans JP', sans-serif;
-  font-weight: 700;
-  background: #0d0d0d;
-  color: #ffffff;
-  line-height: 1.6;
-  -webkit-text-size-adjust: 100%;
-}
-img { max-width: 100%; height: auto; display: block; }
-a { text-decoration: none; color: inherit; }
 
-/* ========================
-   CSS VARIABLES
-======================== */
-:root {
-  --black:       #0d0d0d;
-  --dark:        #141414;
-  --dark2:       #1c1c1c;
-  --gold:        #c9a84c;
-  --gold-light:  #e8c97a;
-  --gold-dim:    rgba(201,168,76,0.12);
-  --gold-border: rgba(201,168,76,0.32);
-  --text-sub:    rgba(255,255,255,0.72);
-  --text-muted:  rgba(255,255,255,0.42);
-  --line-green:  #06C755;
-}
+    html { scroll-behavior: smooth; }
 
-/* ========================
-   HEADER
-======================== */
-header {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 14px 20px;
-  background: rgba(13,13,13,0.92);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--gold-border);
-}
-.logo {
-  font-size: 18px;
-  font-weight: 900;
-  letter-spacing: 0.05em;
-  color: var(--gold);
-}
-.logo span { color: #ffffff; }
-.h-btn {
-  display: inline-flex;
-  align-items: center;
-  background: var(--line-green);
-  color: #fff;
-  font-size: 13px;
-  font-weight: 900;
-  padding: 9px 16px;
-  border-radius: 4px;
-  letter-spacing: 0.03em;
-  white-space: nowrap;
-}
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background: var(--black);
+      color: var(--white);
+      font-size: 16px;
+      line-height: 1.7;
+    }
 
-/* ========================
-   HERO
-======================== */
-.hero {
-  position: relative;
-  overflow: hidden;
-}
-.hero-img {
-  width: 100%;
-  display: block;
-  object-fit: cover;
-  max-height: 100vh;
-}
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    160deg,
-    rgba(0,0,0,0.62) 0%,
-    rgba(0,0,0,0.38) 50%,
-    rgba(0,0,0,0.80) 100%
-  );
-  display: flex;
-  align-items: center;
-  padding: 100px 24px 64px;
-}
-.hero-inner {
-  position: relative;
-  max-width: 560px;
-  width: 100%;
-}
-.hero-badge {
-  display: inline-block;
-  font-size: 11px;
-  font-weight: 900;
-  letter-spacing: 0.08em;
-  color: var(--gold);
-  border: 1px solid var(--gold-border);
-  padding: 5px 12px;
-  border-radius: 2px;
-  margin-bottom: 20px;
-  background: rgba(0,0,0,0.45);
-}
-.hero h1 {
-  font-size: clamp(32px, 8.5vw, 56px);
-  font-weight: 900;
-  line-height: 1.35;
-  letter-spacing: -0.01em;
-  margin-bottom: 16px;
-}
-.hero h1 em {
-  font-style: normal;
-  color: var(--gold-light);
-}
-.hero-sub {
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--text-sub);
-  line-height: 1.8;
-  margin-bottom: 28px;
-}
-.hero-price {
-  font-size: 13px;
-  font-weight: 900;
-  color: var(--gold);
-  letter-spacing: 0.06em;
-  margin-bottom: 24px;
-  padding: 6px 0;
-  border-top: 1px solid var(--gold-border);
-  border-bottom: 1px solid var(--gold-border);
-  display: inline-block;
-}
-.hero-btns {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-top: 8px;
-}
-.btn-line {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--line-green);
-  color: #fff;
-  font-weight: 900;
-  font-size: 17px;
-  padding: 16px 32px;
-  border-radius: 4px;
-  letter-spacing: 0.04em;
-  min-width: 240px;
-  transition: opacity 0.2s;
-}
-.btn-line:active { opacity: 0.82; }
-.btn-outline {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: 1.5px solid var(--gold-border);
-  color: var(--gold);
-  font-weight: 900;
-  font-size: 15px;
-  padding: 14px 28px;
-  border-radius: 4px;
-  letter-spacing: 0.04em;
-  min-width: 200px;
-  background: transparent;
-  transition: background 0.2s;
-}
-.btn-outline:active { background: var(--gold-dim); }
+    /* ナビ */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 20px;
+      background: rgba(13,13,13,0.95);
+      border-bottom: 1px solid rgba(201,168,76,0.2);
+    }
 
-/* ========================
-   SECTION BASE
-======================== */
-.sec {
-  padding: 72px 24px;
-}
-.sec-dark  { background: var(--dark); }
-.sec-black { background: var(--black); }
+    .nav-logo {
+      font-size: 18px;
+      font-weight: 900;
+      color: var(--gold);
+      letter-spacing: 0.05em;
+    }
 
-.sec-label {
-  display: block;
-  font-size: 11px;
-  font-weight: 900;
-  letter-spacing: 0.16em;
-  color: var(--gold);
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-.sec-title {
-  font-size: clamp(28px, 7vw, 44px);
-  font-weight: 900;
-  line-height: 1.3;
-  letter-spacing: -0.01em;
-  margin-bottom: 12px;
-}
-.sec-title em {
-  font-style: normal;
-  color: var(--gold-light);
-}
-.sec-bar {
-  width: 36px;
-  height: 2px;
-  background: var(--gold);
-  margin-bottom: 28px;
-}
+    .nav-cta {
+      display: inline-block;
+      background: var(--line-green);
+      color: #fff;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 10px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+    }
 
-/* ========================
-   MEISHI SECTION
-======================== */
-.meishi-sec { text-align: center; }
-.meishi-lead {
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--text-sub);
-  line-height: 1.85;
-  margin-bottom: 32px;
-}
-.meishi-img-wrap {
-  position: relative;
-  max-width: 300px;
-  margin: 0 auto;
-}
-.meishi-img-wrap::before {
-  content: '';
-  position: absolute;
-  inset: -8px;
-  border: 1px solid var(--gold-border);
-  border-radius: 6px;
-  pointer-events: none;
-}
-.meishi-img {
-  width: 100%;
-  border-radius: 4px;
-}
-.meishi-caption {
-  margin-top: 20px;
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--text-muted);
-  letter-spacing: 0.04em;
-}
+    /* ヒーロー */
+    .hero {
+      padding-top: 60px;
+    }
 
-/* ========================
-   MANGA SECTION
-======================== */
-.manga-sec { text-align: center; }
-.manga-img {
-  width: 100%;
-  max-width: 460px;
-  margin: 28px auto 0;
-  border-radius: 4px;
-}
-.manga-caption {
-  margin-top: 16px;
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--text-muted);
-  line-height: 1.75;
-}
+    .hero img {
+      width: 100%;
+      display: block;
+    }
 
-/* ========================
-   SAMPLES SECTION
-======================== */
-.samples-intro {
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--text-sub);
-  line-height: 1.8;
-  margin-bottom: 32px;
-}
-.sample-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.sample-card {
-  background: var(--dark2);
-  border: 1px solid var(--gold-border);
-  border-radius: 4px;
-  overflow: hidden;
-}
-.sample-img {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  object-position: top center;
-}
-.sample-body { padding: 20px; }
-.sample-name {
-  font-size: 17px;
-  font-weight: 900;
-  color: var(--gold-light);
-  margin-bottom: 4px;
-}
-.sample-label {
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--text-muted);
-  letter-spacing: 0.04em;
-  margin-bottom: 12px;
-}
-.sample-desc {
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--text-sub);
-  line-height: 1.75;
-  margin-bottom: 16px;
-}
-.sample-btns {
-  display: flex;
-  gap: 10px;
-}
-.sample-btn-see {
-  flex: 1;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: 1.5px solid var(--gold-border);
-  color: var(--gold);
-  font-size: 13px;
-  font-weight: 900;
-  padding: 11px 8px;
-  border-radius: 4px;
-  letter-spacing: 0.02em;
-}
-.sample-btn-line {
-  flex: 1;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--line-green);
-  color: #fff;
-  font-size: 13px;
-  font-weight: 900;
-  padding: 11px 8px;
-  border-radius: 4px;
-  letter-spacing: 0.02em;
-}
-.samples-note {
-  margin-top: 20px;
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--text-muted);
-  text-align: center;
-}
+    .hero-cta-wrap {
+      background: var(--dark);
+      padding: 24px 20px;
+      text-align: center;
+    }
 
-/* ========================
-   PRICE SECTION
-======================== */
-.price-badge {
-  display: inline-block;
-  font-size: 11px;
-  font-weight: 900;
-  color: var(--gold);
-  border: 1px solid var(--gold-border);
-  padding: 5px 12px;
-  border-radius: 2px;
-  letter-spacing: 0.08em;
-  margin-bottom: 20px;
-}
-.price-box {
-  background: var(--dark2);
-  border: 1px solid var(--gold-border);
-  border-radius: 4px;
-  padding: 28px 22px;
-}
-.price-orig {
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--text-muted);
-  text-decoration: line-through;
-  margin-bottom: 6px;
-}
-.price-num {
-  font-size: clamp(56px, 14vw, 96px);
-  font-weight: 900;
-  line-height: 1;
-  color: var(--gold-light);
-  letter-spacing: -0.02em;
-  margin-bottom: 4px;
-}
-.price-num span {
-  font-size: 0.42em;
-  vertical-align: super;
-  letter-spacing: 0;
-}
-.price-tax {
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--text-muted);
-  margin-bottom: 24px;
-}
-.price-rule {
-  width: 100%;
-  height: 1px;
-  background: var(--gold-border);
-  margin: 4px 0 20px;
-  border: none;
-}
-.includes-label {
-  font-size: 11px;
-  font-weight: 900;
-  letter-spacing: 0.14em;
-  color: var(--gold);
-  text-transform: uppercase;
-  margin-bottom: 12px;
-}
-.includes-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
-  margin-bottom: 24px;
-}
-.includes-list li {
-  font-size: 15px;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.includes-list li::before {
-  content: '';
-  width: 5px;
-  height: 5px;
-  background: var(--gold);
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-.tokuten {
-  background: var(--gold-dim);
-  border: 1px solid var(--gold-border);
-  border-radius: 4px;
-  padding: 16px;
-}
-.tokuten-label {
-  font-size: 11px;
-  font-weight: 900;
-  letter-spacing: 0.12em;
-  color: var(--gold);
-  text-transform: uppercase;
-  margin-bottom: 6px;
-}
-.tokuten-title {
-  font-size: 15px;
-  font-weight: 900;
-  color: var(--gold-light);
-  margin-bottom: 10px;
-}
-.tokuten-note {
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--text-muted);
-  line-height: 1.8;
-}
+    .hero-cta-wrap p {
+      font-size: 13px;
+      color: var(--gold);
+      margin-bottom: 12px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
 
-/* ========================
-   VOICE SECTION
-======================== */
-.voice-intro {
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--text-sub);
-  line-height: 1.75;
-  margin-bottom: 28px;
-}
-.voice-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin-bottom: 36px;
-}
-.voice-card {
-  background: var(--dark2);
-  border-left: 3px solid var(--gold);
-  padding: 20px;
-  border-radius: 0 4px 4px 0;
-}
-.voice-quote {
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 1.8;
-  margin-bottom: 12px;
-}
-.voice-name {
-  font-size: 13px;
-  font-weight: 900;
-  color: var(--gold);
-}
-.voice-name span {
-  color: var(--text-muted);
-  font-weight: 700;
-}
+    .btn-line {
+      display: block;
+      background: var(--line-green);
+      color: #fff;
+      font-weight: 900;
+      font-size: 18px;
+      padding: 18px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      text-align: center;
+      letter-spacing: 0.03em;
+    }
 
-/* ========================
-   CONTACT SECTION
-======================== */
-.contact-sec { text-align: center; }
-.cta-sub {
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--text-sub);
-  line-height: 1.8;
-  margin-bottom: 32px;
-}
-.cta-btns {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-}
+    .btn-line-outline {
+      display: block;
+      border: 2px solid var(--line-green);
+      color: var(--line-green);
+      font-weight: 700;
+      font-size: 16px;
+      padding: 14px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      text-align: center;
+      margin-top: 12px;
+    }
 
-/* ========================
-   FOOTER
-======================== */
-footer {
-  background: #080808;
-  padding: 40px 24px;
-  text-align: center;
-  border-top: 1px solid var(--gold-border);
-}
-.footer-logo {
-  font-size: 18px;
-  font-weight: 900;
-  color: var(--gold);
-  letter-spacing: 0.05em;
-  margin-bottom: 18px;
-}
-.footer-logo span { color: #ffffff; }
-.footer-links {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-  margin-bottom: 18px;
-}
-.footer-links a {
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--text-muted);
-  text-decoration: underline;
-}
-.footer-copy {
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--text-muted);
-  letter-spacing: 0.04em;
-}
+    /* セクション共通 */
+    section {
+      padding: 60px 20px;
+    }
 
-/* ========================
-   FLOAT LINE BUTTON
-======================== */
-.float-line {
-  position: fixed;
-  bottom: 18px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 200;
-  width: calc(100% - 32px);
-  max-width: 420px;
-}
-.float-line a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  background: var(--line-green);
-  color: #fff;
-  font-size: 16px;
-  font-weight: 900;
-  padding: 16px;
-  border-radius: 6px;
-  letter-spacing: 0.04em;
-  box-shadow: 0 4px 24px rgba(6,199,85,0.38);
-}
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
 
-/* ========================
-   DESKTOP
-======================== */
-@media (min-width: 768px) {
-  .sec { padding: 96px 48px; }
-  .hero-overlay { padding: 140px 48px 80px; }
-  .hero-btns { flex-direction: row; }
-  .cta-btns { flex-direction: row; justify-content: center; }
-  .sample-cards { flex-direction: row; }
-  .sample-card { flex: 1; }
-}
-@media (min-width: 960px) {
-  .sec { max-width: 900px; margin-left: auto; margin-right: auto; }
-  .float-line { display: none; }
-}
-</style>
+    h2 {
+      font-size: 32px;
+      font-weight: 900;
+      line-height: 1.3;
+      margin-bottom: 20px;
+    }
+
+    h2 em {
+      font-style: normal;
+      color: var(--gold);
+    }
+
+    .lead {
+      font-size: 16px;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.8;
+    }
+
+    /* 問題提起 */
+    .problem {
+      background: var(--dark);
+    }
+
+    .problem-box {
+      background: rgba(201,168,76,0.08);
+      border-left: 3px solid var(--gold);
+      padding: 20px;
+      margin-top: 24px;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .problem-box p {
+      font-size: 15px;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.8;
+    }
+
+    /* 共感 */
+    .empathy {
+      background: var(--black);
+    }
+
+    .check-list {
+      list-style: none;
+      margin-top: 24px;
+    }
+
+    .check-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      font-size: 15px;
+      color: rgba(255,255,255,0.85);
+    }
+
+    .check-list li::before {
+      content: "✓";
+      color: var(--gold);
+      font-weight: 900;
+      font-size: 16px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* 4コマ漫画 */
+    .manga {
+      background: var(--offwhite);
+      color: var(--black);
+    }
+
+    .manga .section-label {
+      color: #8a6e2f;
+    }
+
+    .manga h2 {
+      color: var(--black);
+    }
+
+    .manga h2 em {
+      color: #8a6e2f;
+    }
+
+    .manga .lead {
+      color: rgba(0,0,0,0.7);
+    }
+
+    .manga img {
+      width: 100%;
+      display: block;
+      margin-top: 24px;
+      border-radius: 8px;
+    }
+
+    /* サービス内容 */
+    .service {
+      background: var(--dark);
+    }
+
+    .service-list {
+      list-style: none;
+      margin-top: 24px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .service-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(201,168,76,0.2);
+      padding: 14px 16px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .service-list li::before {
+      content: "◆";
+      color: var(--gold);
+      font-size: 10px;
+      flex-shrink: 0;
+    }
+
+    .service-note {
+      margin-top: 20px;
+      font-size: 13px;
+      color: var(--gray);
+      line-height: 1.7;
+    }
+
+    /* 名刺イメージ */
+    .meishi {
+      background: var(--black);
+    }
+
+    .meishi img {
+      width: 100%;
+      display: block;
+      margin: 24px 0;
+      border-radius: 8px;
+    }
+
+    /* サンプル */
+    .samples {
+      background: var(--dark);
+    }
+
+    .sample-card {
+      background: var(--black);
+      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 24px;
+    }
+
+    .sample-card + .sample-card {
+      margin-top: 16px;
+    }
+
+    .sample-card-body {
+      padding: 20px;
+    }
+
+    .sample-card-body h3 {
+      font-size: 18px;
+      font-weight: 900;
+      margin-bottom: 4px;
+    }
+
+    .sample-card-body .sample-tag {
+      font-size: 12px;
+      color: var(--gold);
+      font-weight: 700;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .sample-card-body p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .btn-sample {
+      display: block;
+      background: rgba(201,168,76,0.15);
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 14px;
+      padding: 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .sample-note {
+      margin-top: 20px;
+      font-size: 13px;
+      color: var(--gray);
+      text-align: center;
+    }
+
+    /* 料金 */
+    .price {
+      background: var(--black);
+      text-align: center;
+    }
+
+    .price-box {
+      background: var(--dark);
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 12px;
+      padding: 32px 20px;
+      margin-top: 24px;
+    }
+
+    .price-label {
+      font-size: 13px;
+      color: var(--gold);
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+    }
+
+    .price-main {
+      font-size: 64px;
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .price-main span {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .price-normal {
+      font-size: 14px;
+      color: var(--gray);
+      text-decoration: line-through;
+      margin-bottom: 24px;
+    }
+
+    .price-divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin: 20px 0;
+    }
+
+    .price-includes {
+      text-align: left;
+      list-style: none;
+    }
+
+    .price-includes li {
+      padding: 8px 0;
+      font-size: 14px;
+      color: rgba(255,255,255,0.8);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .price-includes li::before {
+      content: "✓";
+      color: var(--gold);
+      font-weight: 900;
+    }
+
+    .tokuten-box {
+      background: linear-gradient(135deg, rgba(201,168,76,0.15), rgba(201,168,76,0.05));
+      border: 2px solid var(--gold);
+      border-radius: 10px;
+      padding: 24px 20px;
+      margin-top: 24px;
+      text-align: center;
+    }
+
+    .tokuten-box .tokuten-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 0.15em;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .tokuten-box .tokuten-main {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 8px;
+      line-height: 1.6;
+    }
+
+    .tokuten-box .tokuten-count {
+      font-size: 52px;
+      font-weight: 900;
+      color: var(--gold);
+      line-height: 1;
+      margin: 8px 0 4px;
+    }
+
+    .tokuten-box .tokuten-count span {
+      font-size: 20px;
+    }
+
+    .tokuten-box small {
+      font-size: 12px;
+      color: var(--gray);
+      line-height: 1.6;
+      display: block;
+      margin-top: 12px;
+    }
+
+    /* お客様の声 */
+    .voice {
+      background: var(--dark);
+    }
+
+    .voice-card {
+      background: var(--black);
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 16px;
+      border-left: 3px solid var(--gold);
+    }
+
+    .voice-card p {
+      font-size: 15px;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+
+    .voice-card .voice-name {
+      font-size: 13px;
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    /* CTA */
+    .cta {
+      background: var(--black);
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: 26px;
+    }
+
+    .cta .lead {
+      margin-bottom: 28px;
+    }
+
+    /* フッター */
+    footer {
+      background: #000;
+      padding: 30px 20px;
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    footer .footer-logo {
+      font-size: 16px;
+      font-weight: 900;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+
+    footer .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    footer .footer-links a {
+      font-size: 12px;
+      color: var(--gray);
+      text-decoration: none;
+    }
+
+    footer .copyright {
+      font-size: 11px;
+      color: rgba(255,255,255,0.3);
+    }
+
+    /* フロートボタン */
+    .float-btn {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% - 40px);
+      max-width: 400px;
+      z-index: 99;
+    }
+
+    .float-btn a {
+      display: block;
+      background: var(--line-green);
+      color: #fff;
+      font-weight: 900;
+      font-size: 17px;
+      padding: 18px;
+      border-radius: 10px;
+      text-decoration: none;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(6,199,85,0.4);
+    }
+  </style>
 </head>
 <body>
 
-<header>
-  <div class="logo">K<span>'</span>s Office</div>
-  <a href="https://lin.ee/S0ZnWK0" target="_blank" rel="noopener" class="h-btn">LINEで聞いてみる</a>
-</header>
+<!-- ナビ -->
+<nav>
+  <div class="nav-logo">K's Office</div>
+  <a href="https://lin.ee/S0ZnWK0" class="nav-cta">LINEで聞いてみる</a>
+</nav>
 
-<!-- ① HERO -->
-<section class="hero">
-  <img src="assets/img/hero-main.png" alt="K's Office ヒーロー画像" class="hero-img">
-  <div class="hero-overlay">
-  <div class="hero-inner">
-    <div class="hero-badge">職人・一人親方向け ／ 福岡エリア限定 ／ 先着15名</div>
-    <h1>名刺を渡すだけで、<em>仕事の中身まで見てもらえる。</em></h1>
-    <p class="hero-sub">QRを読み込むと、施工写真・仕事内容・人柄まで、一度に伝わります。</p>
-    <p class="hero-price">先着価格 35,000円（税込）</p>
-    <div class="hero-btns">
-      <a href="https://lin.ee/S0ZnWK0" target="_blank" rel="noopener" class="btn-line">LINEで聞いてみる</a>
-      <a href="#samples" class="btn-outline">完成例を見る</a>
+<!-- ヒーロー -->
+<section class="hero" style="padding:0;">
+  <img src="assets/img/hero-main.png" alt="名刺を渡すだけで、仕事の中身まで見てもらえる">
+  <div class="hero-cta-wrap">
+    <p>福岡エリア限定 ／ 先着15名 ／ キャンペーン価格</p>
+    <a href="https://lin.ee/S0ZnWK0" class="btn-line">内容をLINEで確認する</a>
+    <a href="#samples" class="btn-line-outline">完成例を見る</a>
+  </div>
+</section>
+
+<!-- 問題提起 -->
+<section class="problem">
+  <p class="section-label">Problem</p>
+  <h2>名刺だけで、仕事の内容まで<em>伝わっていますか？</em></h2>
+  <p class="lead">今までは、良い仕事をしていれば伝わる時代でした。でも今は、名刺だけでなく、あとからネットで確認されることも増えています。</p>
+  <div class="problem-box">
+    <p>仕事内容、対応エリア、人柄、こだわり。<br>名刺だけでは伝わりにくい部分を、見てもらえる形にしておくことが大切です。</p>
+  </div>
+</section>
+
+<!-- 共感 -->
+<section class="empathy">
+  <p class="section-label">Solution</p>
+  <h2>大がかりなホームページは<em>必要ありません</em></h2>
+  <p class="lead">必要なのは、立派な会社案内ではありません。あなたの仕事を、きちんと伝えるための最低限のページです。</p>
+  <ul class="check-list">
+    <li>難しい設定や文章作りは、こちらで行います</li>
+    <li>写真と必要情報を送っていただければ大丈夫です</li>
+    <li>サーバー・ドメイン・公開管理はすべてこちらで対応</li>
+    <li>名刺にQRを印刷するだけで自己紹介ページへ</li>
+  </ul>
+</section>
+
+<!-- 4コマ漫画 -->
+<section class="manga">
+  <p class="section-label">Story</p>
+  <h2>伝わるだけで、<em>距離が近づく。</em></h2>
+  <p class="lead">名刺を渡した後に、仕事の内容や人柄を確認してもらえると、次に会った時の印象が変わります。</p>
+  <img src="assets/img/IMG_7353.PNG" alt="名刺交換からQRコードで仕事が伝わる4コマ漫画">
+</section>
+
+<!-- サービス内容 -->
+<section class="service">
+  <p class="section-label">Service</p>
+  <h2>作るものは、<em>これだけです</em></h2>
+  <ul class="service-list">
+    <li>QRで開ける自己紹介ページ</li>
+    <li>仕事内容の紹介</li>
+    <li>施工写真の掲載</li>
+    <li>対応エリアの掲載</li>
+    <li>電話ボタン設置</li>
+    <li>LINEボタン設置</li>
+    <li>QRコード画像作成</li>
+    <li>QR付き名刺（特典）</li>
+  </ul>
+  <p class="service-note">サーバー・ドメイン・難しい設定は不要です。公開や管理はこちらで対応します。</p>
+</section>
+
+<!-- 名刺イメージ -->
+<section class="meishi">
+  <p class="section-label">Card Image</p>
+  <h2>名刺にQRを付けて、<em>自己紹介ページへ</em></h2>
+  <p class="lead">名刺を渡した相手が、QRを読み取るだけで、あなたの仕事内容や施工写真を確認できます。紙の名刺はそのまま活かし、足りない説明をQRで補う形です。</p>
+  <img src="assets/img/meishi-sample.png" alt="QRコード付き名刺のサンプル">
+</section>
+
+<!-- サンプル -->
+<section class="samples" id="samples">
+  <p class="section-label">Sample</p>
+  <h2>仕上がりイメージ</h2>
+  <p class="lead">まずは、必要十分な形で整えます。見た目は、職種や雰囲気に合わせて調整できます。</p>
+
+  <div class="sample-card">
+    <div class="sample-card-body">
+      <h3>えんやハウジング</h3>
+      <span class="sample-tag">ナチュラル ／ やわらかい雰囲気</span>
+      <p>はじめての方に安心してもらうことを大切にした構成。人柄や対応の雰囲気が伝わります。</p>
+      <a href="https://ks-office-web.github.io/enya-natural-sample/" class="btn-sample" target="_blank">サンプルを見る →</a>
     </div>
   </div>
-  </div>
-</section>
 
-<!-- ② MEISHI -->
-<section class="sec sec-dark meishi-sec">
-  <span class="sec-label">How It Works</span>
-  <h2 class="sec-title">名刺にQRを付けるだけ。<br><em>渡した後も、仕事が伝わる。</em></h2>
-  <div class="sec-bar"></div>
-  <p class="meishi-lead">名刺交換のその後、あなたの仕事は正しく伝わっていますか。<br>QRコード付きの名刺紹介ページがあれば、渡した相手がいつでも仕事の中身を確認できます。</p>
-  <div class="meishi-img-wrap">
-    <img src="assets/img/meishi-sample.png" alt="QRコード付き名刺のサンプル" class="meishi-img">
-  </div>
-  <p class="meishi-caption">名刺の裏にQRを印刷するだけで完成します</p>
-</section>
-
-<!-- ③ MANGA -->
-<section class="sec sec-black manga-sec" id="manga">
-  <span class="sec-label">Story</span>
-  <h2 class="sec-title">伝わるだけで、<em>変わる。</em></h2>
-  <div class="sec-bar"></div>
-  <img src="assets/img/2DF634FD-C5CC-4211-8B56-6B653687B105.png" alt="名刺交換からQRコードで仕事が伝わる4コマ漫画" class="manga-img">
-  <p class="manga-caption">名刺を渡した後も、仕事の内容や人柄を<br>確認してもらいやすくなります。</p>
-</section>
-
-<!-- ④ SAMPLES -->
-<section class="sec sec-dark" id="samples">
-  <span class="sec-label">Samples</span>
-  <h2 class="sec-title">こんな形で<em>仕上がります</em></h2>
-  <div class="sec-bar"></div>
-  <p class="samples-intro">現場で積み重ねてきた仕事をそのまま見せる形にします。<br>業種・雰囲気に合わせてご相談ください。</p>
-  <div class="sample-cards">
-    <div class="sample-card">
-      <img src="assets/img/DA3F6D8E-3713-4E0E-9D65-0397F43CC3F5.png" alt="えんやハウジング ナチュラルサンプル" class="sample-img">
-      <div class="sample-body">
-        <p class="sample-name">えんやハウジング</p>
-        <p class="sample-label">ナチュラル ／ やわらかい雰囲気</p>
-        <p class="sample-desc">はじめての方に安心してもらうことを大切にした構成。人柄や対応の雰囲気が伝わります。</p>
-        <div class="sample-btns">
-          <a href="https://ks-office-web.github.io/enya-natural-sample/" target="_blank" rel="noopener" class="sample-btn-see">サンプルを見る</a>
-          <a href="https://lin.ee/S0ZnWK0" target="_blank" rel="noopener" class="sample-btn-line">LINEで聞く</a>
-        </div>
-      </div>
-    </div>
-    <div class="sample-card">
-      <img src="assets/img/A3DD7469-6595-43C7-90DD-57C2049A3AEF.png" alt="堤瓦 ダークサンプル" class="sample-img">
-      <div class="sample-body">
-        <p class="sample-name">堤瓦（つつみがわら）</p>
-        <p class="sample-label">ダーク ／ 重厚な雰囲気</p>
-        <p class="sample-desc">余計な説明に頼らず、仕事そのもので伝える構成。施工写真を中心に、現場で積み重ねてきた実力がそのまま伝わります。</p>
-        <div class="sample-btns">
-          <a href="https://ks-office-web.github.io/tsutsumi-dark-sample/" target="_blank" rel="noopener" class="sample-btn-see">サンプルを見る</a>
-          <a href="https://lin.ee/S0ZnWK0" target="_blank" rel="noopener" class="sample-btn-line">LINEで聞く</a>
-        </div>
-      </div>
+  <div class="sample-card">
+    <div class="sample-card-body">
+      <h3>堤瓦（つつみがわら）</h3>
+      <span class="sample-tag">ダーク ／ 重厚な雰囲気</span>
+      <p>余計な説明に頼らず、仕事そのもので伝える構成。施工写真を中心に、現場で積み重ねてきた実力がそのまま伝わります。</p>
+      <a href="https://ks-office-web.github.io/tsutsumi-dark-sample/" class="btn-sample" target="_blank">サンプルを見る →</a>
     </div>
   </div>
-  <p class="samples-note">※ サンプルは一部の例です。どんな業種でも対応しています。</p>
+
+  <p class="sample-note">3タイプ × 3デザインの選択肢からお選びいただけます。</p>
 </section>
 
-<!-- ⑤ PRICE -->
-<section class="sec sec-black" id="price">
-  <span class="sec-label">Price</span>
-  <h2 class="sec-title">先着価格<br><em>35,000円（税込）</em></h2>
-  <div class="sec-bar"></div>
-  <div class="price-badge">福岡エリア限定 ／ 先着15名キャンペーン価格</div>
+<!-- 料金 -->
+<section class="price">
+  <p class="section-label">Price</p>
+  <h2>スタート価格</h2>
+  <p class="lead">通常、このような自己紹介ページを制作会社に依頼すると、もっと費用がかかることがあります。今回は、職人さん・一人親方向けのスタート価格としてご案内します。</p>
+
   <div class="price-box">
-    <p class="price-orig">通常価格 58,000円（税込）</p>
-    <p class="price-num"><span>¥</span>35,000</p>
-    <p class="price-tax">税込 / 1ページ</p>
-    <hr class="price-rule">
-    <p class="includes-label">Included</p>
-    <ul class="includes-list">
-      <li>仕事紹介ページ制作</li>
+    <p class="price-label">先着15名 キャンペーン価格</p>
+    <div class="price-main">35,000<span>円（税込）</span></div>
+    <p class="price-normal">通常価格 58,000円（税込）</p>
+
+    <hr class="price-divider">
+
+    <ul class="price-includes">
+      <li>自己紹介ページ制作</li>
       <li>スマホ対応</li>
-      <li>電話ボタン設置</li>
-      <li>LINEボタン設置</li>
+      <li>電話・LINEボタン設置</li>
       <li>QRコード画像作成</li>
+      <li>公開・管理対応</li>
+      <li>修正2回まで</li>
     </ul>
-    <div class="tokuten">
-      <p class="tokuten-label">Campaign Tokuten</p>
-      <p class="tokuten-title">ご成約特典：QRコード付き名刺50枚</p>
-      <p class="tokuten-note">※ご成約いただいた方が対象です。<br>※ヒアリング情報をもとに当方で作成します。<br>※名刺デザインは当方作成のデザイン限定です。<br>※用紙・デザインの個別指定はできません。</p>
+
+    <div class="tokuten-box">
+      <span class="tokuten-label">🎁 LINE申し込み特典</span>
+      <p class="tokuten-main">QRコード付き名刺が<br>通常50枚から</p>
+      <div class="tokuten-count">200<span>枚</span></div>
+      <p class="tokuten-main">に増量します</p>
+      <small>※名刺デザインは当方指定デザイン。用紙や細かい仕様の個別指定は不可。</small>
     </div>
   </div>
 </section>
 
-<!-- ⑥ VOICE -->
-<section class="sec sec-dark" id="voice">
-  <span class="sec-label">Voice</span>
-  <h2 class="sec-title">制作実績の声</h2>
-  <div class="sec-bar"></div>
-  <p class="voice-intro">実際にページを制作させていただいた方々から、ありがたいお言葉をいただいています。</p>
-  <div class="voice-cards">
-    <div class="voice-card">
-      <p class="voice-quote">お店の雰囲気がそのままページになっていて、まさかここまでできるとは思いませんでした。何十万円分のクオリティに感じます。</p>
-      <p class="voice-name">Bar Fear-Less <span>／ 飲食店</span></p>
-    </div>
-    <div class="voice-card">
-      <p class="voice-quote">ITやWebには全く興味がなかったのですが、自分の考えをここまで再現してもらえるとは思いませんでした。職人仲間にも紹介したいです。</p>
-      <p class="voice-name">堤瓦 堤 健汰 様 <span>／ 瓦職人</span></p>
-    </div>
-    <div class="voice-card">
-      <p class="voice-quote">想像以上の仕上がりで、施工写真を撮り直して修正をお願いしたいくらい、本気で使っていきたいと思える出来でした。</p>
-      <p class="voice-name">IMBPAINT 様 <span>／ 塗装・防水工事</span></p>
-    </div>
+<!-- お客様の声 -->
+<section class="voice">
+  <p class="section-label">Voice</p>
+  <h2>制作実績の声</h2>
+
+  <div class="voice-card">
+    <p>「伝えたいイメージと想いを、きちんと形にしてもらえました。まさかこの価格でここまでしていただけるとは思っていませんでした。名刺と一緒に活用しています。」</p>
+    <span class="voice-name">えんやハウジング 様 ／ リフォーム業</span>
   </div>
-  <div style="text-align:center;">
-    <a href="https://lin.ee/S0ZnWK0" target="_blank" rel="noopener" class="btn-line">LINEで聞いてみる</a>
+
+  <div class="voice-card">
+    <p>「ITやWebには全く興味がなかったのですが、自分の考えをここまで再現してもらえるとは思いませんでした。職人仲間にも紹介したいです。」</p>
+    <span class="voice-name">堤瓦 堤 健汰 様 ／ 瓦職人</span>
+  </div>
+
+  <div class="voice-card">
+    <p>「想像以上の仕上がりで、施工写真を撮り直して修正をお願いしたいくらい、本気で使っていきたいと思える出来でした。」</p>
+    <span class="voice-name">IMBPAINT 様 ／ 塗装・防水工事</span>
   </div>
 </section>
 
-<!-- ⑦ CONTACT -->
-<section class="sec sec-black contact-sec" id="contact">
-  <span class="sec-label" style="display:block;text-align:center;">Contact</span>
-  <h2 class="sec-title" style="text-align:center;">LINEから<br>そのままご相談ください</h2>
-  <div class="sec-bar" style="margin:0 auto 28px;"></div>
-  <p class="cta-sub">料金・準備するもの・制作の流れを<br>LINEでご案内します。</p>
-  <div class="cta-btns">
-    <a href="#samples" class="btn-outline">完成例を見る</a>
-    <a href="https://lin.ee/S0ZnWK0" target="_blank" rel="noopener" class="btn-line">LINEで相談する</a>
-  </div>
+<!-- CTA -->
+<section class="cta">
+  <p class="section-label">Contact</p>
+  <h2>まずは内容だけ<em>確認してください</em></h2>
+  <p class="lead">料金、準備するもの、制作の流れをLINEでご案内します。相談だけでも大丈夫です。</p>
+  <a href="https://lin.ee/S0ZnWK0" class="btn-line">内容をLINEで確認する</a>
+  <a href="https://lin.ee/S0ZnWK0" class="btn-line-outline" style="margin-top:12px;">まずはLINEで相談する</a>
 </section>
 
+<!-- フッター -->
 <footer>
-  <p class="footer-logo">K<span>'</span>s Office</p>
+  <div class="footer-logo">K's Office</div>
   <div class="footer-links">
     <a href="privacy.html">プライバシーポリシー</a>
     <a href="tokushoho.html">特定商取引法に基づく表記</a>
   </div>
-  <p class="footer-copy">© K's Office. All rights reserved.</p>
+  <p class="copyright">© K's Office. All rights reserved.</p>
 </footer>
 
-<div class="float-line">
-  <a href="https://lin.ee/S0ZnWK0" target="_blank" rel="noopener">LINEで聞いてみる →</a>
+<!-- フロートボタン -->
+<div class="float-btn">
+  <a href="https://lin.ee/S0ZnWK0">LINEで聞いてみる →</a>
 </div>
 
 </body>
