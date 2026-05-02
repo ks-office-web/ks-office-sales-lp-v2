@@ -127,35 +127,31 @@ header {
 ======================== */
 .hero {
   position: relative;
-  min-height: 100svh;
-  min-height: 100vh;
-  padding: 100px 24px 64px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   overflow: hidden;
 }
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  background: url('assets/img/hero-main.png') center center / cover no-repeat;
-  z-index: 0;
+.hero-img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  max-height: 100vh;
 }
-.hero-bg::after {
-  content: '';
+.hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     160deg,
     rgba(0,0,0,0.62) 0%,
-    rgba(0,0,0,0.40) 50%,
+    rgba(0,0,0,0.38) 50%,
     rgba(0,0,0,0.80) 100%
   );
+  display: flex;
+  align-items: center;
+  padding: 100px 24px 64px;
 }
 .hero-inner {
   position: relative;
-  z-index: 1;
   max-width: 560px;
+  width: 100%;
 }
 .hero-badge {
   display: inline-block;
@@ -646,7 +642,7 @@ footer {
 ======================== */
 @media (min-width: 768px) {
   .sec { padding: 96px 48px; }
-  .hero { padding: 140px 48px 80px; }
+  .hero-overlay { padding: 140px 48px 80px; }
   .hero-btns { flex-direction: row; }
   .cta-btns { flex-direction: row; justify-content: center; }
   .sample-cards { flex-direction: row; }
@@ -667,7 +663,8 @@ footer {
 
 <!-- ① HERO -->
 <section class="hero">
-  <div class="hero-bg"></div>
+  <img src="assets/img/hero-main.png" alt="K's Office ヒーロー画像" class="hero-img">
+  <div class="hero-overlay">
   <div class="hero-inner">
     <div class="hero-badge">職人・一人親方向け ／ 福岡エリア限定 ／ 先着15名</div>
     <h1>名刺を渡すだけで、<em>仕事の中身まで見てもらえる。</em></h1>
@@ -677,6 +674,7 @@ footer {
       <a href="https://lin.ee/S0ZnWK0" target="_blank" rel="noopener" class="btn-line">LINEで聞いてみる</a>
       <a href="#samples" class="btn-outline">完成例を見る</a>
     </div>
+  </div>
   </div>
 </section>
 
